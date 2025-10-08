@@ -913,7 +913,7 @@ Visualization Manager:
                 Filter size: 10
                 History Policy: Keep Last
                 Reliability Policy: Reliable
-                Value: /planning/trajectory
+                Value: /planning/scenario_planning/trajectory
               Value: true
               View Footprint:
                 Alpha: 1
@@ -1976,6 +1976,17 @@ Visualization Manager:
                           Value: true
                         - Class: rviz_default_plugins/MarkerArray
                           Enabled: true
+                          Name: VirtualWall (RunOut)
+                          Namespaces: {}
+                          Topic:
+                            Depth: 5
+                            Durability Policy: Volatile
+                            History Policy: Keep Last
+                            Reliability Policy: Reliable
+                            Value: /planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/virtual_wall/run_out
+                          Value: true
+                        - Class: rviz_default_plugins/MarkerArray
+                          Enabled: true
                           Name: VirtualWall (SpeedBump)
                           Namespaces: {}
                           Topic:
@@ -2157,6 +2168,17 @@ Visualization Manager:
                             History Policy: Keep Last
                             Reliability Policy: Reliable
                             Value: /planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/no_stopping_area
+                          Value: false
+                        - Class: rviz_default_plugins/MarkerArray
+                          Enabled: false
+                          Name: RunOut
+                          Namespaces: {}
+                          Topic:
+                            Depth: 5
+                            Durability Policy: Volatile
+                            History Policy: Keep Last
+                            Reliability Policy: Reliable
+                            Value: /planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/run_out
                           Value: false
                         - Class: rviz_default_plugins/MarkerArray
                           Enabled: false
@@ -2478,7 +2500,7 @@ Visualization Manager:
                             Durability Policy: Volatile
                             History Policy: Keep Last
                             Reliability Policy: Reliable
-                            Value: /planning/scenario_planning/lane_driving/motion_planning/motion_velocity_planner/obstacle_stop/virtual_walls
+                            Value: /planning/scenario_planning/lane_driving/motion_planning/obstacle_cruise_planner/virtual_wall/stop
                           Value: true
                         - Class: rviz_default_plugins/MarkerArray
                           Enabled: true
@@ -2490,7 +2512,7 @@ Visualization Manager:
                             Durability Policy: Volatile
                             History Policy: Keep Last
                             Reliability Policy: Reliable
-                            Value: /planning/scenario_planning/lane_driving/motion_planning/motion_velocity_planner/obstacle_cruise/virtual_walls
+                            Value: /planning/scenario_planning/lane_driving/motion_planning/obstacle_cruise_planner/virtual_wall/cruise
                           Value: true
                         - Class: rviz_default_plugins/MarkerArray
                           Enabled: true
@@ -2502,7 +2524,7 @@ Visualization Manager:
                             Durability Policy: Volatile
                             History Policy: Keep Last
                             Reliability Policy: Reliable
-                            Value: /planning/scenario_planning/lane_driving/motion_planning/motion_velocity_planner/obstacle_slow_down/virtual_walls
+                            Value: /planning/scenario_planning/lane_driving/motion_planning/obstacle_cruise_planner/virtual_wall/slow_down
                           Value: true
                       Enabled: true
                       Name: VirtualWall
